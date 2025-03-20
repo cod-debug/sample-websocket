@@ -28,3 +28,7 @@ npm run start
 ## Usage
 
 Once the server is running, connect your client application to establish real-time communication using Socket.io.
+
+## Note:
+
+Wala ko pa ni implementan nodemon hahaha so everytime may dugang ka sa codes need e restart ang server manually

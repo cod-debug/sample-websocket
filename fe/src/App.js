@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import Messages from "./components/Messages";
-
+import './App.css'
 const socket = io("http://localhost:8080");
 
 function App() {
@@ -20,7 +20,9 @@ function App() {
     };
   }, []);
 
-  const sendMessage = () => {
+  const sendMessage = (e) => {
+    e.preventDefault();
+
     if (message.trim()) {
       socket.emit("send", {message:message, clientId: socket.id});
       setMessage("");
@@ -33,13 +35,15 @@ function App() {
       <div style={{ marginBottom: "10px" }}>
         <Messages messages={messages} mySocketId={socket.id} />
       </div>
-      <input
-        type="text"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        placeholder="Type a message..."
-      />
-      <button onClick={sendMessage}>Send</button>
+      <form onSubmit={sendMessage}>
+        <input
+          type="text"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder="Type a message..."
+        />
+        <button>Send</button>
+      </form>
     </div>
   );
 }

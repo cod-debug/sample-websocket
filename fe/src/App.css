@@ -6,8 +6,30 @@ body {
   background-color: rgb(49, 48, 48);
 }
 
+h2 {
+  color: white;
+}
+
+form {
+  position: relative;
+}
+
+form button {
+  position: absolute;
+  right: 5px;
+  padding: 5px 10px;
+  top: 15px;
+  background-color: dodgerblue;
+  color:white;
+  outline: 0;
+  border: 1px solid lightblue;
+  border-radius: 5px;
+}
+
 form input {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid darkgray;
 }

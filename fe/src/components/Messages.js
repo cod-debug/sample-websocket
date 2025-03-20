@@ -7,13 +7,14 @@ export default function Messages({ messages, mySocketId }) {
                 messages.map((chat) => {
                     return (
                         <div style={{ textAlign: chat.clientId === mySocketId ? 'left' : 'right' }}>
-                            <strong>{chat.clientId}</strong>:
-                            <span>{chat.message}</span>
+                            <span>{chat.clientId === mySocketId ? chat.clientId : chat.message}</span>
+                            <span> : </span>
+                            <span>{chat.clientId === mySocketId ? chat.message : chat.clientId}</span>
                         </div>
                     )
                 })
             }
-            {messages.length === 0 && <p>Your messages will be displayed here...</p>}
+            {messages.length === 0 && <div>Messages will be displayed here...</div>}
         </div>
     )
 }
