@@ -14,7 +14,7 @@ form {
   position: relative;
 }
 
-form button {
+/* form button {
   position: absolute;
   right: 5px;
   padding: 5px 10px;
@@ -24,7 +24,7 @@ form button {
   outline: 0;
   border: 1px solid lightblue;
   border-radius: 5px;
-}
+} */
 
 form input {
   width: 100%;
@@ -32,4 +32,8 @@ form input {
   margin-top: 10px;
   border-radius: 5px;
   border: 1px solid darkgray;
+}
+
+.text-white {
+  color: white;
 }

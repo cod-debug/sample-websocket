@@ -27,6 +27,10 @@ io.on("connection", (socket) => {
     io.emit('receive', message);
   });
 
+  socket.on('register', (data) => {
+    io.emit('get-users');
+  });
+
   socket.on("disconnect", () => {
     console.log("User disconnected:", socket.id);
   });
