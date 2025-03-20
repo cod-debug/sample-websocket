@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 10px;
+  background-color: rgb(49, 48, 48);
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
